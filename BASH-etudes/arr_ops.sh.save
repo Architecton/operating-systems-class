@@ -1,0 +1,26 @@
+ofruits=('Banana' 'Apple' 'Kiwi' 'Avocado')
+
+printf "Printing the array:\n\n"
+for i in ${fruits[@]}; do
+	echo $i
+done
+
+printf "\nPushing 'Watermelon' to the end of array:\n\n"
+
+fruits=("${fruits[@]}" "Watermelon")
+
+printf "Printing the new array:\n\n"
+
+for i in ${fruits[@]}; do
+	echo $i
+done
+
+printf "Removing an element by a regex match:\n"
+
+fruits=(${fruits[@]/Ap*/})
+
+printf "Printing the resulting array:\n"
+
+for i in ${fruits[@]}; do
+	echo $i
+done

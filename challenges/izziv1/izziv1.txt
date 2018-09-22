@@ -1,0 +1,68 @@
+# dodatni del naloge
+
+# Prvi del je za dodatnim delom.
+
+#koda programa print_shadow
+
+:'
+
+#include <stdio.h>
+#define MAX_SIZE 10000
+
+int main(void){
+    char par[MAX_SIZE];
+    FILE *file;
+    file = fopen("/etc/passwd", "r");
+    while(fgets(par, MAX_SIZE, file)){
+        printf("%s", par);
+    }
+    return 0;
+}
+
+'
+
+# program prevedemo
+gcc print_shadow.c
+# nastavimo, da lahko vsi uporabniki program izvedejo s privilegiji lastnika (root)
+
+# spremenimo lastnika datoteke na root
+
+sudo chown root a.out
+sudo chmod ugo+x a.out
+sudo chmod ugo+s a.out
+# Ce izvedemo ukaz
+# ls -al a.out
+# dobimo izpis
+# -rwsrwxr-- 1 root jernej 7364 mar 18 08:21 a.out
+# Vidimo, da lahko program izvedejo kot root vsi uporabniki, saj je bil nastavljen setuid bit.
+# program lahko nato izvedemo
+./a.out
+
+# prvi del naloge
+
+# dodajanje dveh uporabnikov
+sudo adduser -c "random comment" -home /home/usr1 -shell /bin/bash usr1
+sudo adduser -c "another random comment" -home /home/usr2 -shell /bin/bash usr2
+
+# pojdi v mapo z domacimi direktoriji
+cd /home/usr1
+
+# vsem ne-lastnikom odstranimo dostopnost do domacega imenika usr1
+chmod go-rwx usr1
+
+# vsi lahko dostopajo do domacega imenika uporabnika usr2
+chmod ugo+rwx usr2
+
+# spreminjanje gesel
+sudo passwd usr1
+sudo passwd usr2
+
+# kreiranje nove skupine in dodajanje uporabnikov v to skupino
+sudo addgroup testgroup
+sudo usermod -a -G testgroup usr1
+sudo usermod -a -G testgroup usr2
+
+# brisanje uporabnikov
+# stikalo -f povzroci, da uporabnika izbrisemo tudi ce je prijavljen
+sudo userdel -r -f usr1
+sudo userdel -r -f usr2

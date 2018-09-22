@@ -1,0 +1,8 @@
+n
+fruits=('Apple' 'Banana' 'Orange')
+
+echo ${#fruits[@]}
+
+for i in {0..2}; do
+	echo ${fruits[$i]}
+done

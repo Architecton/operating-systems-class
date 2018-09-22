@@ -1,0 +1,10 @@
+mkdir t1
+mkdir t1/t2
+mkdir t1/t3
+mkdir t1/t4
+mkdir t1/t3/t5
+mkdir t1/t3/t6
+tree t1
+tree t1 -L 1
+echo -e "Operacijski sistemi\n63160328    Jernej Vivod\nRačunalništvo in informatika, UNI\n"
+printf "%s\n%s\t%s\n%s\n" "Operacijski sistemi" "63160328" "Jernej Vivod" "Računalništvo in informatika, UNI"

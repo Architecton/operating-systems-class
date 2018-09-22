@@ -1,0 +1,25 @@
+// 1. del: predavanja 1-9 /////////////////////////////////////////////////
+
+1. Kakšna je razlika med razvrščevalnikom in dodeljevalnikom?
+2. Kako deluje razvrščevalni algoritem SJF?
+3. Naštej naloge sistema operacijskega.
+4. Opiši glavne značilnosti dveh modelov medprocesne komunikacije.
+5. Naštej prednosti mikrojedrnih operacijskih sistemov.
+6. Katere funkcije OS opravlja mikrojedro?
+7. Katere modele medprocesne komunikacije poznate? Za vsakega naštejte njegove prednosti in slabosti.
+8. Kaj je spooling?
+9. Definicija multiprogramiranja
+10. Definicija večopravilnosti
+11. Razlika med multiprogramiranjem in večopravilnostjo
+12. Kriteriji razvrščanja procesov in kateri se najpogosteje uporablja?
+13. Kateri sistemski klici se zgodijo, ko bash lupina zažene program v ospredju?
+14. Kateri je sistemski klic za brisanje datoteke?
+15. kaj vrne true || true && false || return 42
+16. Naštejte sistemske klice (za UNIX), ki so potrebni za vzpostavitev skupnega pomnilnika. Za vsak sistemski klic opišite, kaj stori.
+17. Zapiši tri diskovne datotečne sisteme.
+18. Zapiši dva posebna datotečna sistema
+19. Kakšne vrednosti lahko vrne funkcija v BASH-u?
+
+// 2. del: predavanja 9-12 /////////////////////////////////////////////////
+
+// 3. del: vprašanja iz prakse/vaj /////////////////////////////////////////
